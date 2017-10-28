@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/activity_photo"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:scaleType="centerInside"
+                android:background="@android:color/darker_gray"
+                android:cropToPadding="true"
+                />
+
+            <ImageButton
+                android:id="@+id/activity_camera"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_camera"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="?android:listSeparatorTextViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/activity_title_label"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/activity_title"
+                android:hint="Activity Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="?android:listSeparatorTextViewStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/activity_details_label"
+        android:textSize="18sp"/>
+
+    <Button android:id="@+id/activity_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/activity_place"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.96"
+            android:hint="Place"
+            android:inputType="text"/>
+
+        <Button
+            android:id="@+id/map_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Map"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_weight="5"
+            android:text="Duration"
+            android:textSize="18sp"/>
+
+        <TextView
+            style="?android:listSeparatorTextViewStyle"
+            android:layout_width="115dp"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp">
+
+        <EditText
+            android:id="@+id/duration"
+            android:layout_width="39dp"
+            android:layout_height="wrap_content"
+            android:hint="00"
+            android:inputType="time"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" minutes"
+            android:textSize="20dp"/>
+
+        <Spinner
+            android:id="@+id/activity_spinner"
+            android:layout_width="132dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="85dp">
+        </Spinner>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/activity_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Add comments"
+        android:layout_weight="0.17"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/save_button"
+            android:layout_width="173dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Save"/>
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="175dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Delete"/>
+
+    </LinearLayout>
+
+</LinearLayout>
